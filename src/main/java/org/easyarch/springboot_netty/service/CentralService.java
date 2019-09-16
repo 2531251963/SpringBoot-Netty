@@ -1,7 +1,6 @@
 package org.easyarch.springboot_netty.service;
 
 import io.netty.handler.codec.http.FullHttpRequest;
-import org.easyarch.springboot_netty.pojo.User;
 import org.easyarch.springboot_netty.util.BeanUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,10 +28,4 @@ public class CentralService {
         return (String) method.invoke(clazz,data);
     }
 
-    public static void main(String[] args) {
-        User user = new User();
-        Class clazz=user.getClass();
-       // clazz.isInstance()
-        System.out.println(user.hashCode());
-    }
 }
