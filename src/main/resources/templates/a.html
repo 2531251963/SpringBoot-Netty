@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http_code.jquery.com_jquery-3.1.1.js"></script>
+</head>
+<body>
+<script>
+    var a={}
+    a.a=1;
+    var json=JSON.stringify(a);
+    alert(json)
+    $.ajax({
+        url: "http://127.0.0.1:8080/baseServiceImpl/test",
+        type: "POST",
+        ContentType: 'application/json;charset=utf-8',
+        data: json,
+        success: function (ReceivedData) {
+            alert(ReceivedData)
+        }
+    })
+</script>
+</body>
+</html>
