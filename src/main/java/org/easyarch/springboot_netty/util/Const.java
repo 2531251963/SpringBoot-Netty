@@ -2,7 +2,7 @@ package org.easyarch.springboot_netty.util;
 
 /**
  * @ClassName Const
- * @Description TODO
+ * @Description 一些常量
  * @Author Liyihe
  * @Date 2019/09/16 下午8:02
  * @Version 1.0

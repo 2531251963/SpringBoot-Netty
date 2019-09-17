@@ -8,7 +8,15 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+ * @ClassName ReturnApi
+ * @Description MyBatisMapper
+ * @Author Liyihe
+ * @Date 2019/09/16 下午9:52
+ * @Version 1.0
+ *
+ * 注解式Mybatis 支持动态sql 配置在application.properties
+ */
 @Repository
 public interface UserMapper {
 

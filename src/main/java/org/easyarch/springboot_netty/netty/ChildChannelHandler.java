@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @ClassName ChildChannelHandler
- * @Description TODO
+ * @Description 子Handler处理 加上http编解码和自定义Handler  同时注入IOC
  * @Author Liyihe
  * @Date 2019/09/15 下午11:24
  * @Version 1.0

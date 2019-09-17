@@ -4,7 +4,7 @@ import org.apache.ibatis.jdbc.SQL;
 
 /**
  * @ClassName UserSql
- * @Description TODO
+ * @Description 动态sql
  * @Author Liyihe
  * @Date 2019/09/16 下午8:40
  * @Version 1.0

@@ -2,7 +2,7 @@ package org.easyarch.springboot_netty.service;
 
 /**
  * @ClassName BaseService
- * @Description TODO
+ * @Description 业务接口
  * @Author Liyihe
  * @Date 2019/09/15 下午11:25
  * @Version 1.0

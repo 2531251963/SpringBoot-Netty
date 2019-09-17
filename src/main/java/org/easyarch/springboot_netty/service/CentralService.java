@@ -11,7 +11,11 @@ import java.nio.charset.Charset;
 
 /**
  * @ClassName CentralService
- * @Description TODO
+ * @Description 中心Service 从netty channelRead0调用executeServices
+ * 通过url分割取除类名在到IOC相应的Service示例 来反射调用业务函数
+ * 单独提取 中心Service而不是直接调用某个Service 目地是为了 SpringAOP切面写法
+ * 因为SpringAOP无法在带有继承的类中做切面 NettyServerHandler这个类中继承了SimpleChannelInboundHandler
+ * 因此无法对channelRead0做函数切面
  * @Author Liyihe
  * @Date 2019/09/16 下午5:08
  * @Version 1.0

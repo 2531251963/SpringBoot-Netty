@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName BeanUtil
- * @Description TODO
+ * @Description 自定义Bean工具类
  * @Author Liyihe
  * @Date 2019/09/16 下午5:24
  * @Version 1.0
@@ -35,7 +35,7 @@ public class BeanUtil implements ApplicationContextAware {
         return applicationContext;
     }
 
-    //通过name获取 Bean.
+    //通过name从IOC获取 Bean.
     public static Object getBean(String name) {
 
         return getApplicationContext().getBean(name);

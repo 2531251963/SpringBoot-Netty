@@ -15,8 +15,11 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.Charset;
 
 /**
- * @ClassName AopTestController
- * @Description TODO
+ * @ClassName LogAspect
+ * @Description 切面类
+ * 对CentralService类的executeServices方法做切点
+ * 这个注解@Around 能在executeServices方法调用前和调用后做一些事情   pjp.proceed();调用executeServices这个函数
+ * 本实现 调用前进行JWT身份校验 调用中如有异常自定义全局异常处理  调用后做日志记录
  * @Author Liyihe
  * @Date 2019/09/16 下午4:31
  * @Version 1.0
@@ -27,8 +30,10 @@ public class LogAspect {
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
     @Autowired
     JwtUtil jwtUtil;
+
     @Pointcut(value = "execution(* org.easyarch.springboot_netty.service.CentralService.executeServices(..))")
     public void cutOffPoint() { }
+
     @Around("cutOffPoint()")
     public Object around(ProceedingJoinPoint pjp){
         FullHttpRequest request=(FullHttpRequest)pjp.getArgs()[0];

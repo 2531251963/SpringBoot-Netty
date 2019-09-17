@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @ClassName BaseServiceImpl
- * @Description TODO
+ * @Description 业务接口实现类
  * @Author Liyihe
  * @Date 2019/09/15 下午11:26
  * @Version 1.0

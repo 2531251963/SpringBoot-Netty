@@ -12,16 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @ClassName DiscardServer
- * @Description TODO
+ * @ClassName NettyServer
+ * @Description Netty服务端 Epoll模型  @Component 注入IOC容器
  * @Author Liyihe
  * @Date 2019/09/15 下午11:23
  * @Version 1.0
  */
 @Component
 public class NettyServer {
+
     @Autowired
     private ChildChannelHandler childChannelHandler;
+
     private Logger logger = LoggerFactory.getLogger(NettyServer.class);
     public void run(int port) throws Exception {
         EventLoopGroup bossGroup = new EpollEventLoopGroup();

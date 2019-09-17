@@ -12,6 +12,7 @@ import java.util.Date;
 /**
  * @ClassName JwtUtil
  * @Description https://blog.csdn.net/Shenpibaipao/article/details/88431445#javajwt_118
+ * JWT身份/权限校验
  * @Author Liyihe
  * @Date 2019/09/16 下午9:21
  * @Version 1.0
