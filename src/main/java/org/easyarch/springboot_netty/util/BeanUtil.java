@@ -3,7 +3,6 @@ package org.easyarch.springboot_netty.util;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName BeanUtil
@@ -13,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  */
 
-@Configuration
 public class BeanUtil implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext;
