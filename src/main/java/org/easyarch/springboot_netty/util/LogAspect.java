@@ -42,6 +42,7 @@ public class LogAspect {
         if (authorization!=null)userid=jwtUtil.getUserIdFromJWT(authorization);
         if (userid==null) {
             ReturnApi returnApi=new ReturnApi(Const.HTTPCODE400,Const.BADREQUEST,null);
+            logger.info(returnApi.toString());
             return JSON.toJSONString(returnApi);
         }
         String url=request.uri();

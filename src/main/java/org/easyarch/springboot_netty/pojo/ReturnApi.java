@@ -41,4 +41,13 @@ public class ReturnApi {
         this.message = message;
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "ReturnApi{" +
+                "status=" + status +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

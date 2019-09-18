@@ -39,7 +39,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<FullHttpRequ
         DefaultFullHttpResponse response = null;
             response = new DefaultFullHttpResponse(HTTP_1_1, OK, Unpooled.wrappedBuffer(centralService.executeServices(request).getBytes(StandardCharsets.UTF_8)));
             response.headers().set(ACCESS_CONTROL_ALLOW_ORIGIN, "*");
-            response.headers().set(ACCESS_CONTROL_ALLOW_HEADERS, "Origin, X-Requested-With, Content-Type, Accept");
+            response.headers().set(ACCESS_CONTROL_ALLOW_HEADERS, "Authorization, Origin, X-Requested-With, Content-Type, Accept");
             response.headers().setInt(CONTENT_LENGTH, response.content().readableBytes());
         ctx.writeAndFlush(response);
     }

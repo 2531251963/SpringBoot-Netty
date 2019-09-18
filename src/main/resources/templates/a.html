@@ -8,13 +8,13 @@
 <body>
 <script>
     var a={}
-    a.a=1;
+    a.a='15啊';
     var json=JSON.stringify(a);
     alert(json)
     $.ajax({
         url: "http://127.0.0.1:8080/baseServiceImpl/test",
         type: "POST",
-        ContentType: 'application/json;charset=utf-8',
+        headers:{'Content-Type':'application/json;charset=utf-8','Authorization':'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjIiLCJhdWQiOiJFYXN5QXJjaCIsImlzcyI6IkVhc3lBcmNoIEx5aCIsImV4cCI6MTU2OTI0NzY2NywiaWF0IjoxNTY4NjQyODY3fQ.izMtsczKiwMbwdbzrMphUAZ_OG0ydnit80O7JjZcRaM'},
         data: json,
         success: function (ReceivedData) {
             alert(ReceivedData)
